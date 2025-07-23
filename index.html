@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Accueil du jeu</title>
+        <link rel="stylesheet" href="styles.css" />
+       <link rel="preload" as="image" href="https://dl.dropboxusercontent.com/scl/fi/jimlt4lt94bbawben2f96/fond-noir-avec-des-arbres-noirs.png?rlkey=u123hqi21ql54j6xuvynmwamh&" />
+        <link rel="preload" as="audio" href="https://dl.dropboxusercontent.com/scl/fi/py1l7xjx4gaiiao9q82k8/Musique-de-fond-loup-garou.mp3?rlkey=jcw8ab6965yz2u98r7p2r98wf&" />
+
+        
+    </head>
+    <body>
+         <!--PAGE D'INTRODUCTION-->
+        <div id="intro-page">
+            <h1>Bienvenue dans le jeu : <em>Loup-Garou pour une pleine lune</em></h1>
+            <p>Un jeu créé par <strong>Juliette Gamelin</strong></p>
+            <p>Est-ce votre première partie ?</p>
+
+            <!-- Bouton pour télécharger les cartes -->
+            <button id="download-cards" onclick="telechargerCartes()">
+                📥 Si oui, télécharger les cartes à imprimer
+            </button><br>
+
+            <!-- Bouton pour entrer dans le jeu -->
+            <button id="enter-game" onclick="entrerDansJeu()">Commencer la partie</button>
+        </div>
+
+        <!--PAGE DE SELECTION DES PERSONNAGES-->
+        <div id="page-selection" style="display: none">
+            <!--style="display: none" permet de masquer la page-->
+            <div
+                class="character-card"
+                data-audio="https://dl.dropboxusercontent.com/scl/fi/p00l07dm7pqfbc2mp747r/Loup-Garou.mp3?rlkey=bbsu2se5tmvk2tngb4yzmukjj&">
+                <img
+                    src="https://dl.dropboxusercontent.com/scl/fi/l1nniztkxcd7nx1mm07o8/Loup-Garou.jpeg.png?rlkey=tndphbnta5xpwhrt23chbvatg&"
+                    alt="Loup-Garou" />
+            </div>
+
+            <div
+                class="character-card"
+                data-audio="https://dl.dropboxusercontent.com/scl/fi/p00l07dm7pqfbc2mp747r/Loup-Garou.mp3?rlkey=bbsu2se5tmvk2tngb4yzmukjj&">
+                <img
+                    src="https://dl.dropboxusercontent.com/scl/fi/l1nniztkxcd7nx1mm07o8/Loup-Garou.jpeg.png?rlkey=tndphbnta5xpwhrt23chbvatg&"
+                    alt="Loup-Garou" />
+            </div>
+
+            <div
+                class="character-card"
+                data-audio="https://dl.dropboxusercontent.com/scl/fi/p00l07dm7pqfbc2mp747r/Loup-Garou.mp3?rlkey=bbsu2se5tmvk2tngb4yzmukjj&">
+                <img
+                    src="https://dl.dropboxusercontent.com/scl/fi/l1nniztkxcd7nx1mm07o8/Loup-Garou.jpeg.png?rlkey=tndphbnta5xpwhrt23chbvatg&"
+                    alt="Loup-Garou" />
+            </div>
+
+            <div
+                class="character-card"
+                data-audio="https://dl.dropboxusercontent.com/scl/fi/mz3lknet5aj56l9s9m087/Loup-Doudou.mp3?rlkey=kqrh7s5aqx50frmylcw6ewtsx&">
+                <img
+                    src="https://dl.dropboxusercontent.com/scl/fi/7xpygf828p340v6dpygz4/Loup-Doudou.jpeg.png?rlkey=yzxhz7kyum3wz08yu27dv5fea&"
+                    alt="loup-doudou" />
+            </div>
+
+            <div
+                class="character-card"
+                data-audio="https://dl.dropboxusercontent.com/scl/fi/do99j9ptgoo2f320d73qr/Juge.mp3?rlkey=pag2jk2umy4dv7qb493jj2av7&">
+                <img
+                    src="https://dl.dropboxusercontent.com/scl/fi/0851erc68brsop8b4502e/Juge.jpeg.png?rlkey=spl8o127u4fiekrjrlepynb2j&"
+                    alt="juge" />
+            </div>
+
+            <div
+                class="character-card"
+                data-audio="https://dl.dropboxusercontent.com/scl/fi/iu0845kkzacojqhu121bv/Transformatrice.mp3?rlkey=2a879ifojwmv0fe67v02mznu5&">
+                <img
+                    src="https://dl.dropboxusercontent.com/scl/fi/4kvovj7ldw5tpvl3kcad8/Transformatrice.jpeg.png?rlkey=5qq82nrmspbstb9e46i8asm1t&dl=0"
+                    alt="transformatrice" />
+            </div>
+
+            <div
+                class="character-card"
+                data-audio="https://dl.dropboxusercontent.com/scl/fi/fuq9qs8c0qnanymhg0406/Voyante.mp3?rlkey=odg82efe6lit6e1q0u6l3m32r&">
+                <img
+                    src="https://dl.dropboxusercontent.com/scl/fi/qm3nkvscxcv69nym2t481/voyante.jpeg.png?rlkey=2c5blhy6rqwyj4ra6rd8idq37&"
+                    alt="voyante" />
+            </div>
+
+            <div
+                class="character-card"
+                data-audio="https://dl.dropboxusercontent.com/scl/fi/qgbose1yicmlbds0mt95u/Voleur.mp3?rlkey=worp04s6g4wa0hnputy2m19sv&">
+                <img
+                    src="https://dl.dropboxusercontent.com/scl/fi/e0wqqo2951xa2iohmmchp/Voleur.jpeg.png?rlkey=c6kc2cxngfpezsg2ynwgcnqcd&"
+                    alt="voleur" />
+            </div>
+
+            <div
+                class="character-card"
+                data-audio="https://dl.dropboxusercontent.com/scl/fi/0fnqhz8uvcjp2m10jt2ta/Magicien.mp3?rlkey=th3h1a6qgpmtcb91mqkdilwly&">
+                <img
+                    src="https://dl.dropboxusercontent.com/scl/fi/8m7n5jd3m9y4ieb4x4r3i/magicien.jpeg.png?rlkey=mdchof8h19vu6wb4pcd4ar00c&"
+                    alt="magicien" />
+            </div>
+
+            <div
+                class="character-card"
+                data-audio="https://dl.dropboxusercontent.com/scl/fi/ysrooyl4rwc8ehp506lwe/Sorci-re.mp3?rlkey=dl5aforg2mimb2sfv20a6hbqd&">
+                <img
+                    src="https://dl.dropboxusercontent.com/scl/fi/4amfjp96w4iaaj1310ark/Sorci-re.jpeg.png?rlkey=swfvf8zoc73wvdbd6mrbb40od&"
+                    alt="sorciere" />
+            </div>
+
+            <div class="character-card">
+                <img
+                    src="https://dl.dropboxusercontent.com/scl/fi/0rkx4wgc06eeuwtd1uh9a/Prisonnier.jpeg.png?rlkey=ke61nbxa363jww5lxkhuoxi5n&"
+                    alt="prisonnier" />
+            </div>
+
+            <div class="character-card">
+                <img
+                    src="https://dl.dropboxusercontent.com/scl/fi/ytvvr9tcbam0638i02aul/Avocate.jpeg.png?rlkey=vyhhx7032ocxmpm964bi3imeb&"
+                    alt="avocate" />
+            </div>
+
+            <div class="character-card">
+                <img
+                    src="https://dl.dropboxusercontent.com/scl/fi/hdpws2wse7ihg2yuewnsl/Espion.jpeg.png?rlkey=v7qts2fr8hz5flk7wmolgak7u&"
+                    alt="espion" />
+            </div>
+
+            <div class="character-card">
+                <img
+                    src="https://dl.dropboxusercontent.com/scl/fi/fdswxl3rmjwd11yiflmn1/Villageoise.jpeg.png?rlkey=xm020x1npqa6ugm8kxi4sn659&"
+                    alt="villageoise" />
+            </div>
+
+            <div class="character-card">
+                <img
+                    src="https://dl.dropboxusercontent.com/scl/fi/rf38q9ru51nhms0w8d9b9/Villageois.jpeg.png?rlkey=ckosfsbeckrp3qk8idrq4fkqg&"
+                    alt="villageois" />
+            </div>
+
+            <div class="character-card">
+                <img
+                    src="https://dl.dropboxusercontent.com/scl/fi/fdswxl3rmjwd11yiflmn1/Villageoise.jpeg.png?rlkey=xm020x1npqa6ugm8kxi4sn659&"
+                    alt="villageoise" />
+            </div>
+
+            <div class="character-card">
+                <img
+                    src="https://dl.dropboxusercontent.com/scl/fi/rf38q9ru51nhms0w8d9b9/Villageois.jpeg.png?rlkey=ckosfsbeckrp3qk8idrq4fkqg&"
+                    alt="villageois" />
+            </div>
+
+            <br />
+            <button id="start-game">Débuter la partie</button><br>
+            <button id="back-to-intro" onclick="retourIntro()">⬅️ Revenir à l'accueil</button>
+        </div>
+
+        <div id="page-jeu" style="display: none">
+         <h2>Déroulé du jeu</h2>
+  <h1> Tout le monde fermez les yeux</h1>
+  <p>Voici les étapes et actions des personnages...</p>
+    <button id="chrono">Lancer le décompte</button> <br>       
+  <button id="back-to-game">⬅️ Retour à la sélection des personnages</button>
+            
+        </div>
+            
+        <script src="script.js"></script>
+        
+    </body>
+</html>

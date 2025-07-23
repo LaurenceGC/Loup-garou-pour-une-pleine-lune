@@ -103,10 +103,16 @@ const transitionFinale = "https://dl.dropboxusercontent.com/scl/fi/9b30t5tk2wq2h
     charactersSequence.forEach((name, i) => {
       const next = charactersSequence[i + 1];
 
+       if (selectedSet.has(name) && !playedSounds.has(name)) {
+    finalSequence.push(audioMap[name]);
+    playedSounds.add(name);
+  }
+      
       // 🎭 transition toujours entre magicien et sorcière
       if (name === "magicien" && next === "sorciere") {
         finalSequence.push(audioMap.transition);
       }
+    
 
       // 🎵 ajouter le son si sélectionné et pas encore joué
       if (selectedSet.has(name) && !playedSounds.has(name)) {

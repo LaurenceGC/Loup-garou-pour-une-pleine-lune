@@ -1,3 +1,59 @@
+/* ✅ Responsive viewport */
+@media screen and (max-width: 600px) {
+
+  body {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  #intro-page, #page-selection, #page-jeu {
+    padding: 20px;
+    margin: 10px;
+    box-sizing: border-box;
+  }
+
+  h1 {
+    font-size: 1.4em;
+  }
+
+  h2 {
+    font-size: 1.2em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  .character-card img {
+    width: 100%;
+    max-width: 120px;
+  }
+
+  .character-card {
+    margin: 8px;
+  }
+
+  button {
+    font-size: 1em;
+    padding: 10px 14px;
+    width: 90%;
+    max-width: 300px;
+  }
+
+  #back-to-intro, #start-game, #back-to-game, #chrono {
+    margin: 12px auto;
+    display: block;
+  }
+
+  #chrono-affichage {
+    font-size: 1.1em;
+  }
+}
+
+
+
+
+
 /* page d'intro*/
 
 #intro-page {
